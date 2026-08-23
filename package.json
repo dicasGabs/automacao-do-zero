@@ -1,0 +1,22 @@
+{
+  "name": "aulagabs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "codegen": "playwright codegen http://localhost:3000",
+    "test:cad:firefox": "npx playwright test tests/criarUsuario.spec.js --project=firefox --headed",
+    "test:cad:chromium": "npx playwright test tests/criarUsuario.spec.js --project=chromium --headed",
+    "test:cad:webkit": "npx playwright test tests/criarUsuario.spec.js --project=webkit --headed",
+    "test:cad:all": "npx playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@faker-js/faker": "^10.5.0",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1"
+  }
+}
