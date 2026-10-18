@@ -8,7 +8,8 @@
     "test:cad:firefox": "npx playwright test tests/criarUsuario.spec.js --project=firefox --headed",
     "test:cad:chromium": "npx playwright test tests/criarUsuario.spec.js --project=chromium --headed",
     "test:cad:webkit": "npx playwright test tests/criarUsuario.spec.js --project=webkit --headed",
-    "test:cad:all": "npx playwright test --headed"
+    "test:cad:all": "npx playwright test --headed",
+    "test:login:chromium": "npx playwright test tests/login.spec.js --project=chromium --headed"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@faker-js/faker": "^10.5.0",
-    "@playwright/test": "^1.61.1",
+    "@playwright/test": "^1.64.1",
     "@types/node": "^26.1.1"
   }
 }
