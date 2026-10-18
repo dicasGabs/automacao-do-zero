@@ -1,19 +1,19 @@
 import { test, expect } from '../fixtures/fixtures';
-import { HomePage } from '../pages/HomePage';
+import { LoginPage } from '../pages/LoginPage';
 import { RegisterPage } from '../pages/RegisterPage';
 
 
 test.describe('Cadastro de usuário', () => {
 
-    let homePage;
+    let loginPage;
     let registerPage;
 
     test.beforeEach(async ({ page }) => {
-        homePage = new HomePage(page);
+        loginPage = new LoginPage(page);
         registerPage = new RegisterPage(page);
 
-        await homePage.abrir();
-        await homePage.clicarCriarConta();
+        await loginPage.abrir();
+        await loginPage.clicarCriarConta();
     });
 
 
@@ -31,7 +31,7 @@ test.describe('Cadastro de usuário', () => {
     });
 
 
-    test('deve manter os dados digitados no formulário antes de enviar', async ({ page, usuario }) => {
+    test('deve manter os dados digitados no formulário antes de enviar', async ({ usuario }) => {
         await registerPage.preencherCadastro(usuario);
 
         // SOFT ASSSERTIONS:    não param na primeira falha, mas continuam executando os demais expect
@@ -45,7 +45,3 @@ test.describe('Cadastro de usuário', () => {
 
 
 });
-
-
-
-
